@@ -9,7 +9,7 @@ A workshop worksheet for LSE educators in the Department of Management. It takes
 | File | What it is |
 |---|---|
 | `Worksheet_use_GenAI_to_make_learning_resources_you_can_keep_workshop.html` | The interactive worksheet. It's a single, self-contained HTML file, with the screenshots, photos and code built in. |
-| `GenAI_workshop_worksheet_accessible.pdf` | The accessible PDF version of the worksheet, linked from the **Accessible PDF** button at the top of the worksheet. |
+| `GenAI_workshop_worksheet_accessible.pdf` | The accessible PDF version of the worksheet, shared directly with people who need it. |
 | `README.md` | This file. |
 
 ## Using the worksheet
@@ -40,7 +40,7 @@ Prompts to copy into Claude have a **Copy** button. Nothing you type into the wo
 2. In this repository, select **Add file**, then **Upload files**, and upload the new `Worksheet_use_GenAI_to_make_learning_resources_you_can_keep_workshop.html`.
 3. Select **Commit changes**. GitHub Pages updates the live worksheet within a few minutes.
 
-If you change the content, update the accessible PDF too: upload the new version with the same file name, `GenAI_workshop_worksheet_accessible.pdf`, so the link from the worksheet keeps working.
+If you change the content, update the accessible PDF too, so the two versions match.
 
 ## How it was made
 
