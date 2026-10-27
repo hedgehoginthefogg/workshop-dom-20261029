@@ -10,6 +10,7 @@ A workshop worksheet for LSE educators in the Department of Management. It takes
 |---|---|
 | `index.html` | The landing page, linking to all the workshop resources: https://hedgehoginthefogg.github.io/workshop-dom-20261029/ |
 | `Worksheet_use_GenAI_to_make_learning_resources_you_can_keep_workshop.html` | The interactive worksheet. It's a single, self-contained HTML file, with the screenshots, photos and code built in. |
+| `Slides_use_GenAI_to_make_learning_resources_you_can_keep_workshop.html` | The workshop slides. |
 | `GenAI_workshop_worksheet_accessible.pdf` | The accessible PDF version of the worksheet, linked from the landing page. |
 | `GenAI_workshop_printed_companion.pdf` | The printed companion: the session steps on four A4 pages, for printing and handing out to use alongside the digital worksheet. |
 | `README.md` | This file. |
