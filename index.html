@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Use GenAI to make learning resources you can keep – workshop resources</title>
+<meta name="description" content="Resources for the LSE Department of Management workshop on using GenAI to make learning resources you can keep.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Overpass:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: light;
+  --paper: #FAFAF7; --surface: #FFFFFF; --ink: #16182B; --muted: #4A4F66; --line: #D6DAE6;
+  --navy: #1F3A93; --navy-ink: #FFFFFF; --red: #C8102E; --green: #00856F; --amber: #B35C00; --purple: #6B3FA0; --grey: #8A90A6;
+  --focus: #C8102E;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --paper: #11131F; --surface: #1A1D2E; --ink: #ECEDF5; --muted: #B6BAD0; --line: #383D57;
+    --navy: #7F98F2; --navy-ink: #11131F; --red: #FF6F83; --green: #3FCFB0; --amber: #F2A24E; --purple: #B998F5; --grey: #8E94AE;
+    --focus: #FF6F83;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: "Atkinson Hyperlegible", Arial, sans-serif; font-size: 1.0625rem; line-height: 1.6;
+}
+h1, h2, h3 { font-family: "Overpass", "Atkinson Hyperlegible", Arial, sans-serif; font-weight: 800; line-height: 1.15; letter-spacing: -.005em; margin: 0; }
+a { color: var(--navy); text-underline-offset: .15em; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
+.skip { position: absolute; left: -9999px; top: 0; }
+.skip:focus { left: 1rem; top: 1rem; background: var(--surface); padding: .5rem 1rem; z-index: 10; }
+
+.wrap { max-width: 64rem; margin: 0 auto; padding: 0 1.5rem; }
+header.top { border-bottom: 4px solid var(--navy); background: var(--surface); }
+header.top .wrap { display: flex; align-items: center; gap: .9rem; padding-top: 1rem; padding-bottom: 1rem; }
+.mark { width: 2rem; height: 2rem; border-radius: 50%; border: 4px solid var(--navy); display: grid; place-items: center; flex: none; }
+.mark span { width: .7rem; height: .7rem; border-radius: 50%; background: var(--navy); }
+header.top p { margin: 0; font-size: .95rem; color: var(--muted); }
+
+.hero { padding: 3rem 0 2rem; }
+.hero h1 { font-size: clamp(2rem, 5.2vw, 3.3rem); max-width: 20ch; }
+.hero .sub { font-size: 1.15rem; color: var(--muted); margin: 1rem 0 0; max-width: 60ch; }
+
+.start {
+  margin: 2rem 0 0; display: grid; grid-template-columns: 1fr auto; gap: 1.5rem; align-items: center;
+  background: var(--navy); color: var(--navy-ink); border-radius: 14px; padding: 1.6rem 1.8rem;
+}
+.start h2 { font-size: 1.6rem; }
+.start p { margin: .4rem 0 0; }
+.start a.go {
+  display: inline-block; background: var(--navy-ink); color: var(--navy); font-family: "Overpass", Arial, sans-serif; font-weight: 800;
+  text-decoration: none; padding: .8rem 1.4rem .65rem; border-radius: 999px; white-space: nowrap;
+}
+.start a.go:hover { text-decoration: underline; }
+.start .short { font-family: "Overpass", Arial, sans-serif; font-weight: 800; }
+.start :focus-visible { outline-color: var(--navy-ink); }
+
+/* the route: before, during and after the session */
+.route { list-style: none; margin: 3rem 0 2rem; padding: 0; position: relative; }
+.route > li { position: relative; padding: 0 0 2.6rem 4.2rem; }
+.route > li::before {
+  content: ""; position: absolute; left: 1.05rem; top: 2.2rem; bottom: 0; width: 8px; border-radius: 4px;
+  background: var(--line-colour, var(--navy));
+}
+.route > li:last-child::before { background: repeating-linear-gradient(to bottom, var(--grey) 0 6px, transparent 6px 16px); width: 6px; left: 1.15rem; }
+.route > li:last-child { padding-bottom: 0; }
+.stop {
+  position: absolute; left: 0; top: 0; width: 2.6rem; height: 2.6rem; border-radius: 50%;
+  border: 5px solid var(--navy); background: var(--surface); display: grid; place-items: center;
+  font-family: "Overpass", Arial, sans-serif; font-weight: 800; color: var(--navy); font-size: 1.05rem; padding-top: .12rem;
+}
+.route h2 { font-size: 1.55rem; padding-top: .35rem; }
+.route .intro { color: var(--muted); margin: .4rem 0 1.1rem; max-width: 60ch; }
+.links { list-style: none; margin: 0; padding: 0; display: grid; gap: .7rem; }
+.links li { background: var(--surface); border: 1px solid var(--line); border-left: 6px solid var(--accent, var(--navy)); border-radius: 6px 10px 10px 6px; padding: .85rem 1.1rem; }
+.links a { font-weight: 700; }
+.links .what { display: block; color: var(--muted); font-size: .98rem; }
+.links .need { display: block; font-size: .9rem; color: var(--muted); margin-top: .2rem; }
+.explainers { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: .7rem; margin: .7rem 0 0; }
+.explainers > div { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: .85rem 1.1rem; }
+.explainers h3 { font-size: 1.05rem; margin-bottom: .3rem; }
+.explainers p { margin: 0; font-size: .98rem; }
+
+footer { border-top: 1px solid var(--line); margin-top: 3rem; padding: 2rem 0 3rem; }
+footer h2 { font-size: 1.25rem; margin-bottom: .8rem; }
+.people { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: .9rem; margin: 0; padding: 0; list-style: none; }
+.people b { display: block; }
+.people span { display: block; color: var(--muted); font-size: .95rem; }
+footer .made { color: var(--muted); font-size: .92rem; margin: 1.8rem 0 0; max-width: 60ch; }
+
+@media (max-width: 40rem) {
+  .start { grid-template-columns: 1fr; }
+  .route > li { padding-left: 3.6rem; }
+}
+@media print {
+  header.top, .start { border: 1px solid #999; background: #fff; color: #000; }
+  .start a.go { border: 1px solid #000; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the resources</a>
+
+<header class="top">
+  <div class="wrap">
+    <div class="mark" aria-hidden="true"><span></span></div>
+    <p>A GenAI workshop for the Department of Management, LSE</p>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <section class="hero" aria-labelledby="title">
+    <h1 id="title">Use GenAI to make learning resources you can keep</h1>
+    <p class="sub">Set up a Claude Project with your own course materials, then use it to make interactive activities and animated explainer videos for your students. Everything you make is a file you download and keep.</p>
+
+    <div class="start">
+      <div>
+        <h2>Start with the digital worksheet</h2>
+        <p>It takes you through the whole session, step by step. Short link: <span class="short">bit.ly/dom261029</span></p>
+      </div>
+      <a class="go" href="Worksheet_use_GenAI_to_make_learning_resources_you_can_keep_workshop.html">Open the worksheet</a>
+    </div>
+  </section>
+
+  <ol class="route" aria-label="Resources for before, during and after the session">
+    <li style="--line-colour: var(--navy)">
+      <span class="stop" aria-hidden="true">1</span>
+      <h2>Before the session</h2>
+      <p class="intro">Two things to do in advance, so you can start building straight away.</p>
+      <ul class="links">
+        <li>
+          <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=_epnVXfnpUKRu5RA_UO4k4zUPQVPq-xNvlpfUsYh05lUMzY1M044WDdVRUJGWFBLTkJBS1JCVTBHTC4u">Request an LSE Claude account</a>
+          <span class="what">If you see “Access denied” when you open shared resources, follow the steps on <a href="Worksheet_use_GenAI_to_make_learning_resources_you_can_keep_workshop.html#help">Troubleshooting</a> to sign in with SSO.</span>
+        </li>
+        <li>
+          <a href="Worksheet_use_GenAI_to_make_learning_resources_you_can_keep_workshop.html#prepare">Choose three to five teaching files from one course</a>
+          <span class="what">For example your course outline, one week’s slides and a case study. Leave out anything about individual students.</span>
+        </li>
+      </ul>
+    </li>
+
+    <li style="--line-colour: linear-gradient(to bottom, var(--red) 0 25%, var(--green) 25% 50%, var(--amber) 50% 75%, var(--purple) 75% 100%)">
+      <span class="stop" aria-hidden="true">2</span>
+      <h2>In the session</h2>
+      <p class="intro">Keep the worksheet open in one browser tab and Claude in another.</p>
+      <ul class="links">
+        <li style="--accent: var(--navy)">
+          <a href="Worksheet_use_GenAI_to_make_learning_resources_you_can_keep_workshop.html">Digital worksheet</a>
+          <span class="what">Steps, prompts to copy and examples, in 15 screens.</span>
+        </li>
+        <li style="--accent: var(--green)">
+          <a href="GenAI_workshop_worksheet_accessible.pdf">Accessible PDF version of the worksheet</a>
+          <span class="what">The full worksheet as a tagged PDF, for screen readers and other assistive technology, with all the prompts written out.</span>
+        </li>
+        <li style="--accent: var(--purple)">
+          <a href="https://claude.ai/artifact/QNLwLecqYRp42UNKt8ZMqK">Workshop slides</a>
+          <span class="need">Opens in Claude. LSE Claude account needed.</span>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <span class="stop" aria-hidden="true">3</span>
+      <h2>After the session</h2>
+      <p class="intro">Optional extras for when you have more time.</p>
+      <ul class="links">
+        <li style="--accent: var(--grey)">
+          <a href="Worksheet_use_GenAI_to_make_learning_resources_you_can_keep_workshop.html#files">Go further screens in the worksheet</a>
+          <span class="what">How Claude reads your files, hosting and sharing your resources, creating a style guide, and building and testing.</span>
+        </li>
+        <li style="--accent: var(--grey)">
+          <a href="https://claude.ai/artifact/DGWvxNirfQsMzKk8k2DLFC">Creating effective Claude Artifacts: a guide for LSE educators</a>
+          <span class="need">Opens in Claude. LSE Claude account needed.</span>
+        </li>
+        <li style="--accent: var(--grey)">
+          <a href="https://lsecloud.sharepoint.com/sites/DSLLearningHub/SitePages/AI-%26-Education-Toolkit.aspx">AI and Education Toolkit</a>
+          <span class="what">Guides for LSE educators, based on the AI and Education Fellows’ projects.</span>
+          <span class="need">LSE login needed.</span>
+        </li>
+        <li style="--accent: var(--grey)">
+          Visual explainers made with Claude
+          <span class="what">Each topic has an interactive version and a PDF handout.</span>
+          <div class="explainers">
+            <div>
+              <h3>Jeremy Bentham’s Panopticon</h3>
+              <p><a href="https://hedgehoginthefogg.github.io/claude-visual-explainers/panopticon.html">Interactive</a> | <a href="https://hedgehoginthefogg.github.io/claude-visual-explainers/panopticon-text-version.pdf">PDF handout</a></p>
+            </div>
+            <div>
+              <h3>The tragedy of the commons</h3>
+              <p><a href="https://hedgehoginthefogg.github.io/claude-visual-explainers/tragedy-of-the-commons.html">Interactive</a> | <a href="https://hedgehoginthefogg.github.io/claude-visual-explainers/tragedy-of-the-commons-text-version.pdf">PDF handout</a></p>
+            </div>
+            <div>
+              <h3>Exponential growth</h3>
+              <p><a href="https://hedgehoginthefogg.github.io/claude-visual-explainers/rice-and-chessboard.html">Interactive</a> | <a href="https://hedgehoginthefogg.github.io/claude-visual-explainers/rice-and-chessboard-text-version.pdf">PDF handout</a></p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </li>
+  </ol>
+</main>
+
+<footer>
+  <div class="wrap">
+    <h2>Questions and further support</h2>
+    <ul class="people">
+      <li><b>Dr Dori Sallai</b><span>Workshop lead, Department of Management</span><a href="mailto:d.sallai@lse.ac.uk">d.sallai@lse.ac.uk</a></li>
+      <li><b>Steven Williams</b><span>AI and Education Specialist, Eden Centre and Digital Skills Lab</span><a href="mailto:s.williams10@lse.ac.uk">s.williams10@lse.ac.uk</a></li>
+      <li><b>Jamie Hayward</b><span>AI and Education Specialist, Eden Centre and Digital Skills Lab</span><a href="mailto:J.Hayward1@lse.ac.uk">J.Hayward1@lse.ac.uk</a></li>
+    </ul>
+    <p class="made">Need the resources in another format? <a href="mailto:s.williams10@lse.ac.uk">Email Steven Williams</a>.</p>
+  </div>
+</footer>
+</body>
+</html>
