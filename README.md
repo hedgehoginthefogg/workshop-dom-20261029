@@ -11,6 +11,7 @@ A workshop worksheet for LSE educators in the Department of Management. It takes
 | `index.html` | The landing page, linking to all the workshop resources: https://hedgehoginthefogg.github.io/workshop-dom-20261029/ |
 | `Worksheet_use_GenAI_to_make_learning_resources_you_can_keep_workshop.html` | The interactive worksheet. It's a single, self-contained HTML file, with the screenshots, photos and code built in. |
 | `GenAI_workshop_worksheet_accessible.pdf` | The accessible PDF version of the worksheet, linked from the landing page. |
+| `GenAI_workshop_printed_companion.pdf` | The printed companion: the session steps on four A4 pages, for printing and handing out to use alongside the digital worksheet. |
 | `README.md` | This file. |
 
 ## Using the worksheet
@@ -34,14 +35,6 @@ Prompts to copy into Claude have a **Copy** button. Nothing you type into the wo
 - Screenshots have alt text and can be enlarged.
 - The animated GIF has a pause button, and starts paused if you have reduced motion turned on.
 - The accessible PDF version has been checked with axesCheck against PDF/UA and WCAG.
-
-## Updating the worksheet
-
-1. Make and test your changes, then download the updated file and give it the same name, `Worksheet_use_GenAI_to_make_learning_resources_you_can_keep_workshop.html`, so the worksheet's web address stays the same.
-2. In this repository, select **Add file**, then **Upload files**, and upload the new `Worksheet_use_GenAI_to_make_learning_resources_you_can_keep_workshop.html`.
-3. Select **Commit changes**. GitHub Pages updates the live worksheet within a few minutes.
-
-If you change the content, update the accessible PDF too, so the two versions match.
 
 ## How it was made
 
