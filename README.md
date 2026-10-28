@@ -2,7 +2,7 @@
 
 A workshop worksheet for LSE educators in the Department of Management. It takes you through setting up a Claude Project with your own course materials, then using it to make interactive learning resources and animated explainer videos that you can download, keep and host anywhere.
 
-**Open the worksheet:** [bit.ly/dom261029](https://bit.ly/dom261029) (full address: https://hedgehoginthefogg.github.io/workshop-dom-20261029/Worksheet_use_GenAI_to_make_learning_resources_you_can_keep_workshop)
+**Open the workshop resources:** [tinyurl.com/dom2910](https://tinyurl.com/dom2910). The worksheet is in Part 2 of that page.
 
 ## What's in this repository
 
@@ -19,9 +19,9 @@ A workshop worksheet for LSE educators in the Department of Management. It takes
 
 The worksheet is split into screens. Move through them with **Previous** and **Next** at the bottom, or jump to any screen from the route map on the left.
 
-- **Screens 1 to 9** are the main session: preparing your materials, setting up a Claude Project, choosing and building one resource, and planning where to use it.
-- **Screens 10 to 14** are optional **Go further** screens, for after the session: how Claude reads your files, hosting and sharing, creating a style guide, building and testing, and examples for inspiration.
-- **Screen 15** is troubleshooting, including how to sign in to Claude with SSO if you see "Access denied".
+- **Screens 1 to 8** are the main session: preparing your materials, setting up a Claude Project, choosing and building one resource, and planning where to use it.
+- **Screens 9 to 13** are optional **Go further** screens, for after the session: how Claude reads your files, hosting and sharing, creating a style guide, building and testing, and examples for inspiration.
+- **Screen 14** is troubleshooting, including how to sign in to Claude with SSO if you see "Access denied".
 
 Prompts to copy into Claude have a **Copy** button. Nothing you type into the worksheet is saved.
 
