@@ -153,6 +153,7 @@ footer .made { color: var(--muted); font-size: .92rem; margin: 1.8rem 0 0; max-w
 .demo .presenter img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid var(--navy); flex: none; }
 .demo a.open { margin-top: auto; padding-top: .4rem; font-weight: 700; }
 .demo.wide { grid-column: 1 / -1; }
+.demo video.walkthrough { display: block; width: 100%; max-width: 46rem; aspect-ratio: 16 / 9; border: 1px solid var(--line); border-radius: 10px; background: #11131F; margin: .4rem 0 .2rem; }
 .video-slot { aspect-ratio: 16 / 9; width: 100%; max-width: 34rem; border: 2px dashed var(--line); border-radius: 10px; display: grid; place-items: center; text-align: center; color: var(--muted); padding: 1rem; background: var(--paper); }
 .part .start { margin-top: 0; }
 .route { margin-top: 2.2rem; }
@@ -209,9 +210,12 @@ footer .made { color: var(--muted); font-size: .92rem; margin: 1.8rem 0 0; max-w
         <a class="open" href="https://assessmenttracker.lovable.app/" target="_blank" rel="noopener">Open the assessment tracker</a>
       </article>
       <article class="demo wide" style="--accent: var(--purple)">
-        <h3>Simulation game</h3>
-        <p>A simulation game Dori is building with Claude for her Management teaching.</p>
-        <div class="video-slot" role="img" aria-label="Video coming soon">Video of the simulation game coming soon</div>
+        <h3>Simulation game: Project Lodestar</h3>
+        <p>A change management simulation Dori is building with Claude, still a work in progress. Students lead an AI roll-out at a fictional insurer, choosing a change lever each turn to move 20 key people towards adoption within 52 weeks and £1.2 million.</p>
+        <video class="walkthrough" controls preload="metadata" playsinline poster="https://hedgehoginthefogg.github.io/workshop-dom-20261029/Project_Lodestar_still.jpg" src="https://hedgehoginthefogg.github.io/workshop-dom-20261029/Project_Lodestar_gameplay_explainer.mp4" aria-label="Screen recording walkthrough of Project Lodestar, showing the briefing, the player choosing change levers each turn, and the people on the map moving towards adoption">Your browser can’t play this video. <a href="https://hedgehoginthefogg.github.io/workshop-dom-20261029/Project_Lodestar_gameplay_explainer.mp4" target="_blank" rel="noopener">Open the walkthrough video</a>.</video>
+        <p class="by">A 1.5-minute screen recording, with on-screen captions and no sound. <a href="https://hedgehoginthefogg.github.io/workshop-dom-20261029/Project_Lodestar_gameplay_explainer.mp4" target="_blank" rel="noopener">Open the video on its own</a>.</p>
+        <a class="open" href="https://claude.ai/artifact/1aL2LYKaiKgneJXM32Zb4V" target="_blank" rel="noopener">Open the live game</a>
+        <p class="by">Opens in Claude. LSE Claude account needed.</p>
       </article>
     </div>
   </section>

@@ -13,6 +13,8 @@ A workshop worksheet for LSE educators in the Department of Management. It takes
 | `Slides_use_GenAI_to_make_learning_resources_you_can_keep_workshop.html` | The workshop slides. |
 | `GenAI_workshop_worksheet_accessible.pdf` | The accessible PDF version of the worksheet, linked from the landing page. |
 | `GenAI_workshop_printed_companion.pdf` | The printed companion: the session steps on four A4 pages, for printing and handing out to use alongside the digital worksheet. |
+| `Project_Lodestar_gameplay_explainer.mp4` | A screen recording walkthrough of Project Lodestar, Dori’s change management simulation, shown on the landing page. |
+| `Project_Lodestar_still.jpg` | The cover image for that video. |
 | `README.md` | This file. |
 
 ## Using the worksheet
